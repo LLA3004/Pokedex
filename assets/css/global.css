@@ -3,15 +3,24 @@
     box-sizing: border-box;
 }
 
-.content{
-    padding: 1rem;
+
+body{
+    background-color: rgb(238, 231, 216);
 }
 
-@media screen and (min-width: 768) {
-    body {
-      background-color: blue;
+.content{
+    padding: 1rem;
+    background-color: #fff;
+    height: 100vh;
+}
+
+@media screen and (min-width: 992px) {
+.content{
+    max-width: 992px;
+    margin: 0 auto;
+}
     }
-  }
+  
   
 
 ol.pokemons{
@@ -21,6 +30,14 @@ ol.pokemons{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+@media screen and (min-width: 992px) {
+    .pokemons{
+        grid-template-columns: 1fr 1fr 1fr;
+
+
+    }
+    
+    }
 
 .pokemon{
     margin:.5rem;
@@ -30,6 +47,8 @@ ol.pokemons{
     display: flex;
     flex-direction: column;
 }
+
+
 
 .pokemon .detail{
     display: flex;
