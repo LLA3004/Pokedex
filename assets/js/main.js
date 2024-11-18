@@ -1,1 +1,1 @@
-console.log("MA OEH!")
+fetch()
