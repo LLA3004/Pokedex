@@ -19,7 +19,12 @@ function convertPokemontoLi(pokemon) {
 const pokemonListElement = document.getElementById('pokemonList');
 
 
-    pokeApi.getPokemons().then((pokemons) => {
+    pokeApi.getPokemons().then((pokemons = []) => {
+       const novaLista = pokemons.map((value, index, array) =>{
+            return pokemon.name
+        })
+
+        /*
         const listItens = []
         pokemons.map()
         for (let i = 0; i < pokemons.length; i++) {
@@ -27,6 +32,6 @@ const pokemonListElement = document.getElementById('pokemonList');
             listItens.push(convertPokemontoLi(pokemon))
         }
         console.log(listItens)
-
+*/
     })
     .catch((error) => console.log(error));
