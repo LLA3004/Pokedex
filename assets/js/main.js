@@ -16,15 +16,16 @@ function convertPokemontoLi(pokemon) {
             </li>`;
 }
 
-const pokemonListElement = document.getElementById('pokemonList');
-
+const pokemonList = document.getElementById('pokemonList');
 
     pokeApi.getPokemons().then((pokemons = []) => {
-       const novaLista = pokemons.map((value, index, array) =>{
-            return pokemon.name
-        })
-
-        /*
+    const newHtml = pokemons.map(convertPokemontoLi).join('')
+    pokemonList.innerHTML = newHtml     
+    
+    
+    
+    
+    /*
         const listItens = []
         pokemons.map()
         for (let i = 0; i < pokemons.length; i++) {
