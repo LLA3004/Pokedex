@@ -3,7 +3,7 @@
 function convertPokemontoLi(pokemon) {
     return `
      <li class="pokemon">
-                <span class="number">#001</span>
+                <span class="number">#${pokemon.order}</span>
                 <span class="name">${pokemon.name}</span> 
 
                 <div class="detail">
