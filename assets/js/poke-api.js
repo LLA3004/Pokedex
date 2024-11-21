@@ -27,7 +27,7 @@ pokeApi.getPokemonDetail = (pokemon) => {
 };
 
 // Obter lista de Pokémon com detalhes
-pokeApi.getPokemons = (offset = 0, limit = 16) => {
+pokeApi.getPokemons = (offset = 0, limit = 150) => {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
 
     return fetch(url)
