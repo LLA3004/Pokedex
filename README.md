@@ -1,7 +1,6 @@
 
 # Pokédex Web App
 
-![Pokédex Preview]([link-para-uma-imagem-ou-gif-do-seu-projeto-aqui](https://lla3004.github.io/Pokedex/))
 
 Este projeto é uma **Pokédex** interativa desenvolvida com **HTML**, **CSS** e **JavaScript**, utilizando a API **PokéAPI** para buscar informações sobre os Pokémon. A aplicação permite explorar detalhes dos Pokémon de forma dinâmica e amigável.
 
