@@ -1,3 +1,8 @@
+// Referência ao elemento da lista
+const pokemonList = document.getElementById("pokemonList");
+const loadMoreButton = document.getElementById('loadMoreButton')
+const limit = 5
+let offset = 0
 // Função para converter Pokémon em HTML
 function convertPokemontoLi(pokemon) {
     return `
@@ -14,13 +19,16 @@ function convertPokemontoLi(pokemon) {
     `;
 }
 
-// Referência ao elemento da lista
-const pokemonList = document.getElementById("pokemonList");
 
-// Obter e renderizar os Pokémon
-pokeApi.getPokemons()
+function loadPokemonItens(offset, limit){
+    pokeApi.getPokemons(offset, limit)
     .then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemontoLi).join("");
         pokemonList.innerHTML = newHtml;
     })
-    .catch((error) => console.log("Erro ao renderizar Pokémon:", error));
+
+}
+
+loadMoreButton.addEventListener('click', () =>{
+    loadPokemonItens()
+})
