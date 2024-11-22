@@ -21,13 +21,15 @@ function convertPokemontoLi(pokemon) {
 
 
 function loadPokemonItens(offset, limit){
-    pokeApi.getPokemons(offset, limit)
+    pokeApi.getPokemons(offset, limit).then((pokemon))
     .then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemontoLi).join("");
         pokemonList.innerHTML = newHtml;
     })
 
 }
+
+loadPokemonItens(limit, offset)
 
 loadMoreButton.addEventListener('click', () =>{
     loadPokemonItens()
